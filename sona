@@ -1,0 +1,23 @@
+#!/bin/bash
+#Description:How to install and configure SonarQube on centos7
+#Follow below steps successively to install SonarQube on your centos server 
+
+sudo chown -R vagrant /opt/sonarqube-9.3.0.51899
+
+cd /opt
+cd sonarqube-9.3.0.51899
+/bin
+cd linux-x86-64
+
+# ./sonar.sh start
+
+#Connect to Sonaqube
+#Connect to the SonarQube server through the browser. It uses port 9000.
+
+#http://<your-ip-address>:9000
+sudo systemctl start firewalld
+sudo systemctl enable firewalld
+sudo systemctl status firewalld 
+ sudo firewall-cmd --permanent --add-port=9000/tcpcd
+
+ sudo firewall-cmd --reload
