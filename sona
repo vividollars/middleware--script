@@ -17,6 +17,7 @@ cd linux-x86-64
 #http://<your-ip-address>:9000
 sudo systemctl start firewalld
 sudo systemctl enable firewalld
+sudo systemctl status firewalld 
  sudo firewall-cmd --permanent --add-port=9000/tcpcd
 
  sudo firewall-cmd --reload
